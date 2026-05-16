@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waleed Ahmed Baig — Senior Accountant & Audit Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0A1628;
+  --navy2:#0F1F38;
+  --navy3:#162845;
+  --gold:#B8965A;
+  --gold2:#D4AF70;
+  --gold3:#F0CC8A;
+  --cream:#F7F3EC;
+  --white:#FFFFFF;
+  --muted:rgba(255,255,255,0.45);
+  --muted2:rgba(255,255,255,0.65);
+  --border:rgba(184,150,90,0.18);
+  --border2:rgba(184,150,90,0.35);
+}
+body{font-family:'Outfit',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  padding:0 5%;
+  height:70px;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(10,22,40,0.88);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:all 0.3s;
+}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1.15rem;letter-spacing:0.03em;
+  color:var(--white);
+}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{
+  color:var(--muted);text-decoration:none;
+  font-size:0.8rem;font-weight:400;
+  letter-spacing:0.12em;text-transform:uppercase;
+  transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transition:transform 0.2s;
+}
+.nav-links a:hover{color:var(--gold2)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{
+  background:var(--gold);color:var(--navy);
+  padding:0.5rem 1.4rem;border-radius:2px;
+  font-size:0.78rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;transition:background 0.2s;
+}
+.nav-cta:hover{background:var(--gold2)}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  padding:8rem 5% 4rem;
+  position:relative;overflow:hidden;
+}
+.hero-bg-lines{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(184,150,90,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(184,150,90,0.03) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+.hero-circle{
+  position:absolute;right:-10%;top:50%;transform:translateY(-50%);
+  width:55vw;height:55vw;max-width:700px;max-height:700px;
+  border-radius:50%;
+  border:1px solid rgba(184,150,90,0.08);
+}
+.hero-circle::before{
+  content:'';position:absolute;inset:10%;border-radius:50%;
+  border:1px solid rgba(184,150,90,0.06);
+}
+.hero-circle::after{
+  content:'';position:absolute;inset:22%;border-radius:50%;
+  background:radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);
+}
+.hero-left{position:relative;z-index:2;max-width:620px}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:0.8rem;
+  margin-bottom:2rem;
+}
+.hero-line{width:40px;height:1px;background:var(--gold)}
+.hero-eyebrow-text{
+  font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(3.2rem,5.5vw,5.2rem);
+  line-height:1.08;font-weight:600;
+  color:var(--white);margin-bottom:1rem;
+}
+.hero h1 .italic{font-style:italic;color:var(--gold2)}
+.hero-tagline{
+  font-size:1rem;color:var(--muted2);
+  line-height:1.75;font-weight:300;
+  max-width:480px;margin-bottom:2.5rem;
+  border-left:2px solid var(--gold);
+  padding-left:1.2rem;
+}
+.hero-badges{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:3rem}
+.badge{
+  padding:0.38rem 0.9rem;
+  border:1px solid var(--border2);
+  color:rgba(255,255,255,0.7);
+  font-size:0.72rem;letter-spacing:0.08em;
+  border-radius:100px;
+  background:rgba(184,150,90,0.06);
+  transition:all 0.2s;
+}
+.badge:hover{border-color:var(--gold);color:var(--gold3);background:rgba(184,150,90,0.1)}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--gold);color:var(--navy);
+  padding:0.9rem 2.2rem;border-radius:2px;
+  font-size:0.82rem;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;transition:all 0.2s;
+  border:1px solid var(--gold);
+}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 25px rgba(184,150,90,0.25)}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:transparent;color:var(--white);
+  padding:0.9rem 2.2rem;border-radius:2px;
+  font-size:0.82rem;font-weight:400;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.2);
+  transition:all 0.2s;
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold2)}
+.arrow{font-size:1rem;transition:transform 0.2s}
+.btn-gold:hover .arrow,.btn-outline:hover .arrow{transform:translateX(3px)}
+
+/* METRICS */
+.metrics{
+  background:var(--navy2);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:3rem 5%;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+}
+.metric{
+  text-align:center;padding:1.5rem 1rem;
+  border-right:1px solid var(--border);
+  position:relative;
+}
+.metric:last-child{border-right:none}
+.metric-num{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;color:var(--gold2);
+  line-height:1;margin-bottom:0.4rem;
+  font-weight:600;
+}
+.metric-label{
+  font-size:0.72rem;color:var(--muted);
+  letter-spacing:0.12em;text-transform:uppercase;
+  line-height:1.5;
+}
+.metric-sub{
+  font-size:0.68rem;color:rgba(184,150,90,0.6);
+  margin-top:0.2rem;
+}
+
+/* ABOUT */
+.about{
+  padding:7rem 5%;
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;
+  align-items:center;
+}
+.about-left .section-eyebrow{
+  display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem;
+}
+.section-eyebrow .line{width:30px;height:1px;background:var(--gold)}
+.section-eyebrow span{
+  font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;
+}
+.about-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem;line-height:1.2;
+  color:var(--white);margin-bottom:1.5rem;
+}
+.about-title em{font-style:italic;color:var(--gold2)}
+.about-text{
+  font-size:0.92rem;color:var(--muted2);
+  line-height:1.9;font-weight:300;margin-bottom:1.5rem;
+}
+.about-highlight{
+  background:rgba(184,150,90,0.08);
+  border-left:3px solid var(--gold);
+  padding:1.2rem 1.5rem;
+  border-radius:0 4px 4px 0;
+  font-size:0.88rem;color:var(--muted2);
+  line-height:1.7;font-style:italic;
+}
+.about-right{display:flex;flex-direction:column;gap:1rem}
+.info-item{
+  display:flex;align-items:flex-start;gap:1rem;
+  padding:1.2rem 1.5rem;
+  background:var(--navy2);
+  border:1px solid var(--border);
+  border-radius:4px;
+  transition:border-color 0.2s;
+}
+.info-item:hover{border-color:var(--border2)}
+.info-icon{
+  width:36px;height:36px;flex-shrink:0;
+  background:rgba(184,150,90,0.1);
+  border:1px solid var(--border2);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;
+}
+.info-label{font-size:0.7rem;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.2rem}
+.info-val{font-size:0.88rem;color:var(--muted2);font-weight:400}
+
+/* EXPERTISE */
+.expertise{
+  background:var(--navy2);
+  padding:7rem 5%;
+}
+.section-header{margin-bottom:3.5rem}
+.section-header .section-eyebrow{display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem}
+.section-header .section-eyebrow .line{width:30px;height:1px;background:var(--gold)}
+.section-header .section-eyebrow span{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.section-header h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;color:var(--white);
+  line-height:1.2;
+}
+.section-header h2 em{font-style:italic;color:var(--gold2)}
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--border);
+}
+.skill-card{
+  background:var(--navy2);
+  padding:2.2rem 2rem;
+  position:relative;overflow:hidden;
+  transition:background 0.3s;
+}
+.skill-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:2px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s;
+}
+.skill-card:hover{background:rgba(184,150,90,0.04)}
+.skill-card:hover::before{transform:scaleX(1)}
+.skill-num{
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem;color:rgba(184,150,90,0.12);
+  font-weight:600;line-height:1;
+  margin-bottom:1rem;
+}
+.skill-name{
+  font-size:0.95rem;font-weight:500;
+  color:var(--white);margin-bottom:0.6rem;
+}
+.skill-desc{font-size:0.8rem;color:var(--muted);line-height:1.65}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem}
+.skill-tag{
+  font-size:0.65rem;letter-spacing:0.08em;
+  color:var(--gold);border:1px solid rgba(184,150,90,0.25);
+  padding:0.18rem 0.6rem;border-radius:100px;
+}
+
+/* EXPERIENCE */
+.experience{padding:7rem 5%}
+.exp-wrap{display:grid;grid-template-columns:1fr 2fr;gap:5rem}
+.exp-nav{position:sticky;top:100px;height:fit-content}
+.exp-nav-title{
+  font-family:'Playfair Display',serif;
+  font-size:2.4rem;color:var(--white);
+  line-height:1.2;margin-bottom:2rem;
+}
+.exp-nav-title em{font-style:italic;color:var(--gold2)}
+.exp-tabs{display:flex;flex-direction:column;gap:0.5rem}
+.exp-tab{
+  padding:0.8rem 1.2rem;
+  border:1px solid transparent;
+  border-radius:2px;cursor:pointer;
+  transition:all 0.2s;text-align:left;
+  background:none;
+}
+.exp-tab.active{
+  background:rgba(184,150,90,0.08);
+  border-color:var(--border2);
+}
+.exp-tab-year{font-size:0.7rem;color:var(--gold);letter-spacing:0.1em;margin-bottom:0.2rem}
+.exp-tab-company{font-size:0.88rem;color:var(--muted2);font-weight:500}
+.exp-content-area{}
+.exp-item{display:none}
+.exp-item.active{display:block}
+.exp-header{margin-bottom:2rem}
+.exp-role{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;color:var(--white);
+  margin-bottom:0.4rem;
+}
+.exp-meta{
+  display:flex;flex-wrap:wrap;gap:1rem;
+  margin-bottom:1rem;
+}
+.exp-meta-item{
+  display:flex;align-items:center;gap:0.4rem;
+  font-size:0.78rem;color:var(--muted);
+}
+.exp-meta-dot{width:4px;height:4px;background:var(--gold);border-radius:50%}
+.exp-desc{
+  font-size:0.88rem;color:var(--muted2);
+  line-height:1.8;margin-bottom:1.5rem;
+  font-style:italic;border-left:2px solid var(--border2);
+  padding-left:1rem;
+}
+.exp-achievements{list-style:none}
+.exp-achievements li{
+  display:flex;gap:1rem;
+  padding:0.9rem 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  font-size:0.85rem;color:var(--muted2);line-height:1.7;
+}
+.exp-achievements li:last-child{border-bottom:none}
+.ach-icon{
+  width:24px;height:24px;flex-shrink:0;
+  background:rgba(184,150,90,0.1);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.65rem;margin-top:2px;
+}
+.ach-bold{color:var(--white);font-weight:500}
+.exp-clients{
+  margin-top:1.5rem;
+  padding:1.2rem 1.5rem;
+  background:var(--navy2);
+  border:1px solid var(--border);
+  border-radius:4px;
+}
+.exp-clients-label{
+  font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.6rem;
+}
+.exp-clients-list{
+  font-size:0.78rem;color:var(--muted);
+  line-height:1.8;
+}
+
+/* IFRS */
+.ifrs{
+  background:var(--navy2);padding:7rem 5%;
+}
+.ifrs-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--border);margin-top:3rem;
+}
+.ifrs-card{
+  background:var(--navy2);padding:2rem 1.5rem;
+  text-align:center;transition:background 0.2s;
+  position:relative;overflow:hidden;
+}
+.ifrs-card::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 0%, rgba(184,150,90,0.07), transparent 70%);
+  opacity:0;transition:opacity 0.3s;
+}
+.ifrs-card:hover{background:rgba(184,150,90,0.04)}
+.ifrs-card:hover::after{opacity:1}
+.ifrs-code{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;color:var(--gold2);
+  font-weight:600;line-height:1;margin-bottom:0.5rem;
+}
+.ifrs-name{font-size:0.75rem;color:var(--muted);line-height:1.5}
+
+/* QUALS */
+.qualifications{padding:7rem 5%}
+.quals-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;margin-top:3rem;
+}
+.qual-card{
+  background:var(--navy2);
+  border:1px solid var(--border);
+  padding:2rem;border-radius:4px;
+  position:relative;overflow:hidden;
+  transition:all 0.3s;
+}
+.qual-card::before{
+  content:'';position:absolute;
+  top:0;left:0;width:3px;height:0;
+  background:var(--gold);
+  transition:height 0.3s;
+}
+.qual-card:hover{border-color:var(--border2);transform:translateY(-3px)}
+.qual-card:hover::before{height:100%}
+.qual-abbr{
+  font-family:'Playfair Display',serif;
+  font-size:1.6rem;color:var(--gold2);
+  margin-bottom:0.4rem;font-weight:600;
+}
+.qual-full{font-size:0.85rem;color:var(--white);font-weight:500;margin-bottom:0.4rem}
+.qual-body{font-size:0.76rem;color:var(--muted);line-height:1.6}
+
+/* CERTS */
+.certifications{background:var(--navy2);padding:7rem 5%}
+.certs-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1rem;margin-top:3rem;
+}
+.cert-card{
+  display:flex;gap:1rem;
+  padding:1.4rem;
+  background:var(--navy);
+  border:1px solid var(--border);
+  border-radius:4px;
+  transition:all 0.2s;
+}
+.cert-card:hover{border-color:var(--border2)}
+.cert-icon{
+  width:40px;height:40px;flex-shrink:0;
+  background:rgba(184,150,90,0.08);
+  border:1px solid var(--border);
+  border-radius:2px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+}
+.cert-name{font-size:0.85rem;color:var(--white);font-weight:500;margin-bottom:0.3rem;line-height:1.3}
+.cert-issuer{font-size:0.72rem;color:var(--gold);letter-spacing:0.05em}
+.cert-year{font-size:0.7rem;color:var(--muted);margin-top:0.2rem}
+
+/* TECH */
+.tech{padding:7rem 5%}
+.tech-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1rem;margin-top:3rem;
+}
+.tech-card{
+  padding:1.8rem 1.5rem;
+  background:var(--navy2);
+  border:1px solid var(--border);
+  border-radius:4px;text-align:center;
+  transition:all 0.2s;
+}
+.tech-card:hover{border-color:var(--border2);transform:translateY(-2px)}
+.tech-icon{font-size:1.8rem;margin-bottom:0.8rem}
+.tech-name{font-size:0.85rem;color:var(--white);font-weight:500;margin-bottom:0.3rem}
+.tech-level{
+  font-size:0.68rem;color:var(--gold);
+  letter-spacing:0.1em;text-transform:uppercase;
+}
+.tech-bar{
+  height:2px;background:var(--border);
+  border-radius:1px;margin-top:0.8rem;overflow:hidden;
+}
+.tech-fill{height:100%;background:var(--gold);border-radius:1px}
+
+/* CONTACT */
+.contact{
+  background:var(--navy2);
+  padding:7rem 5%;
+}
+.contact-inner{
+  max-width:800px;margin:0 auto;text-align:center;
+}
+.contact-pre{
+  font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1rem;
+  display:flex;align-items:center;justify-content:center;gap:0.8rem;
+}
+.contact-pre .line{width:30px;height:1px;background:var(--gold)}
+.contact-title{
+  font-family:'Playfair Display',serif;
+  font-size:3rem;color:var(--white);
+  margin-bottom:1rem;
+}
+.contact-title em{font-style:italic;color:var(--gold2)}
+.contact-sub{font-size:0.95rem;color:var(--muted);margin-bottom:3rem;line-height:1.7;font-weight:300}
+.contact-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1rem;margin-bottom:3rem;
+}
+.contact-card{
+  padding:1.8rem;
+  background:var(--navy);
+  border:1px solid var(--border);
+  border-radius:4px;
+  text-decoration:none;
+  transition:all 0.2s;
+  display:block;
+}
+.contact-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.contact-card-icon{font-size:1.5rem;margin-bottom:0.8rem}
+.contact-card-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
+.contact-card-val{font-size:0.82rem;color:var(--muted2);word-break:break-all}
+.contact-avail{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.7rem 1.8rem;
+  border:1px solid var(--border2);
+  border-radius:100px;
+  font-size:0.78rem;color:var(--muted2);
+  letter-spacing:0.05em;
+}
+.avail-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:#22C55E;
+  box-shadow:0 0 0 3px rgba(34,197,94,0.2);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 3px rgba(34,197,94,0.2)}
+  50%{box-shadow:0 0 0 6px rgba(34,197,94,0.08)}
+}
+
+/* FOOTER */
+footer{
+  padding:2rem 5%;
+  border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:0.75rem;color:rgba(255,255,255,0.2);
+}
+footer a{color:var(--gold);text-decoration:none;font-size:0.72rem}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.hero-left>*{animation:fadeUp 0.8s ease both}
+.hero-eyebrow{animation-delay:0.1s}
+.hero h1{animation-delay:0.25s}
+.hero-tagline{animation-delay:0.4s}
+.hero-badges{animation-delay:0.5s}
+.hero-actions{animation-delay:0.6s}
+
+@media(max-width:1024px){
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .ifrs-grid{grid-template-columns:repeat(2,2fr)}
+  .quals-grid{grid-template-columns:repeat(2,1fr)}
+  .certs-grid{grid-template-columns:repeat(2,1fr)}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-cards{grid-template-columns:1fr}
+  .exp-wrap{grid-template-columns:1fr;gap:2rem}
+  .exp-nav{position:static}
+  .exp-tabs{flex-direction:row;flex-wrap:wrap}
+  .about{grid-template-columns:1fr;gap:3rem}
+}
+@media(max-width:768px){
+  nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  section,.hero,.about,.expertise,.experience,.ifrs,.qualifications,.certifications,.tech,.contact{padding:4rem 1.5rem}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .metric:nth-child(2){border-right:none}
+  .metric:nth-child(5){grid-column:span 2;border-right:none}
+  .skills-grid{grid-template-columns:1fr}
+  .quals-grid{grid-template-columns:1fr}
+  .ifrs-grid{grid-template-columns:repeat(2,1fr)}
+  .certs-grid{grid-template-columns:1fr}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  footer{flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Waleed <span>Ahmed Baig</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#experience">Experience</a>
+    <a href="#qualifications">Credentials</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="mailto:baigwaleedahmed@gmail.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-circle"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <div class="hero-line"></div>
+      <span class="hero-eyebrow-text">Senior Accountant & Audit Professional</span>
+    </div>
+    <h1>Financial<br><span class="italic">Excellence</span><br>Delivered.</h1>
+    <p class="hero-tagline">
+      10+ years of IFRS-compliant reporting, internal audit, and strategic finance — managing 8 global organizations simultaneously with zero major audit findings.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">ACCA Finalist</span>
+      <span class="badge">MIPA — IPA Australia</span>
+      <span class="badge">AFA — IFA UK</span>
+      <span class="badge">CPA · CIA</span>
+      <span class="badge">SAP S/4HANA Certified</span>
+      <span class="badge">Open to Global Relocation</span>
+    </div>
+    <div class="hero-actions">
+      <a href="mailto:baigwaleedahmed@gmail.com" class="btn-gold">Hire Me <span class="arrow">→</span></a>
+      <a href="#experience" class="btn-outline">View Experience <span class="arrow">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<div class="metrics">
+  <div class="metric">
+    <div class="metric-num">10+</div>
+    <div class="metric-label">Years of Experience</div>
+  </div>
+  <div class="metric">
+    <div class="metric-num">8</div>
+    <div class="metric-label">Organizations Managed<br>Simultaneously</div>
+  </div>
+  <div class="metric">
+    <div class="metric-num">20%</div>
+    <div class="metric-label">Profitability<br>Improvement</div>
+  </div>
+  <div class="metric">
+    <div class="metric-num">0</div>
+    <div class="metric-label">Major Audit<br>Findings</div>
+    <div class="metric-sub">Across all managed entities</div>
+  </div>
+  <div class="metric">
+    <div class="metric-num">56%</div>
+    <div class="metric-label">Operational<br>Efficiency Gain</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-left">
+    <div class="section-eyebrow">
+      <div class="line"></div>
+      <span>About Me</span>
+    </div>
+    <h2 class="about-title">Results-driven.<br><em>Internationally</em> credentialed.</h2>
+    <p class="about-text">I am a Senior Accountant and Internal Audit professional with over a decade of progressive experience across IT, engineering, consultancy, and food service sectors. My track record speaks in numbers: 8 organizations managed simultaneously, 20% profitability improvement delivered, and zero major audit findings across all entities.</p>
+    <p class="about-text">Holding internationally recognized credentials including ACCA Finalist, MIPA (IPA Australia), and AFA (IFA UK), I bring a global perspective to every engagement. I am proficient in SAP S/4HANA Finance, Advanced Excel, and ERP systems, with deep expertise in IFRS/IAS compliance and International Standards on Auditing.</p>
+    <div class="about-highlight">
+      "My goal is to bring financial clarity, audit confidence, and strategic insight to organizations ready to operate at the highest standards — locally or globally."
+    </div>
+  </div>
+  <div class="about-right">
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div>
+        <div class="info-label">Location</div>
+        <div class="info-val">Lahore, Pakistan · Open to Global Relocation</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">✉️</div>
+      <div>
+        <div class="info-label">Email</div>
+        <div class="info-val">baigwaleedahmed@gmail.com</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div>
+        <div class="info-label">Phone</div>
+        <div class="info-val">+92-345-1222286</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🔗</div>
+      <div>
+        <div class="info-label">LinkedIn</div>
+        <div class="info-val">linkedin.com/in/waleed-ahmed-baig-cpa</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">🌐</div>
+      <div>
+        <div class="info-label">Languages</div>
+        <div class="info-val">English (Professional) · Urdu (Native) · Punjabi (Native)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+  <div class="section-header">
+    <div class="section-eyebrow">
+      <div class="line"></div>
+      <span>Core Competencies</span>
+    </div>
+    <h2>Areas of <em>Expertise</em></h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-num">01</div>
+      <div class="skill-name">IFRS Financial Reporting</div>
+      <div class="skill-desc">Full-cycle preparation of IFRS/IAS-compliant financial statements, general ledger, trial balances, reconciliations, and board-level management reports for multi-sector clients.</div>
+      <div class="skill-tags"><span class="skill-tag">IFRS 9</span><span class="skill-tag">IFRS 15</span><span class="skill-tag">IFRS 16</span><span class="skill-tag">IAS 16</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">02</div>
+      <div class="skill-name">Internal & External Audit</div>
+      <div class="skill-desc">End-to-end audit coordination per ISA. Direct liaison with external auditors, preparation of audit schedules and documentation — zero major findings across all 8 managed entities.</div>
+      <div class="skill-tags"><span class="skill-tag">ISA</span><span class="skill-tag">Risk Assessment</span><span class="skill-tag">Internal Controls</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">03</div>
+      <div class="skill-name">Corporate Taxation & Compliance</div>
+      <div class="skill-desc">Income tax filings, EOBI, Social Security, and complete statutory compliance — executed accurately and on schedule for multiple entities simultaneously.</div>
+      <div class="skill-tags"><span class="skill-tag">Income Tax</span><span class="skill-tag">EOBI</span><span class="skill-tag">AML/CFT</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">04</div>
+      <div class="skill-name">Budgeting & Forecasting</div>
+      <div class="skill-desc">Strategic budgeting, forecasting, and variance analysis — delivering actionable financial advisory to C-suite and senior management for data-driven decision making.</div>
+      <div class="skill-tags"><span class="skill-tag">Budget Planning</span><span class="skill-tag">Variance Analysis</span><span class="skill-tag">Forecasting</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">05</div>
+      <div class="skill-name">SAP S/4HANA & ERP Systems</div>
+      <div class="skill-desc">Hands-on implementation and operation of SAP S/4HANA Finance, QuickBooks Desktop, Power BI, and Advanced Excel including Pivot Tables and Power Query automation.</div>
+      <div class="skill-tags"><span class="skill-tag">SAP S/4HANA</span><span class="skill-tag">QuickBooks</span><span class="skill-tag">Power BI</span><span class="skill-tag">Excel</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-num">06</div>
+      <div class="skill-name">AML / CFT & Fraud Risk</div>
+      <div class="skill-desc">Anti-money laundering compliance, forensic accounting, and fraud detection frameworks. NAVTTC-certified AML/CFT specialist with West Virginia University forensic accounting training.</div>
+      <div class="skill-tags"><span class="skill-tag">AML/CFT</span><span class="skill-tag">Forensic Accounting</span><span class="skill-tag">Fraud Detection</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="exp-wrap">
+    <div class="exp-nav">
+      <div class="section-eyebrow" style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem">
+        <div class="line" style="width:30px;height:1px;background:var(--gold)"></div>
+        <span style="font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:500">Career History</span>
+      </div>
+      <h2 class="exp-nav-title">Professional <em>Experience</em></h2>
+      <div class="exp-tabs">
+        <button class="exp-tab active" onclick="showExp(0,this)">
+          <div class="exp-tab-year">2021 — Present</div>
+          <div class="exp-tab-company">Chartac Business Services</div>
+        </button>
+        <button class="exp-tab" onclick="showExp(1,this)">
+          <div class="exp-tab-year">2013 — 2020</div>
+          <div class="exp-tab-company">The Painters</div>
+        </button>
+      </div>
+    </div>
+    <div class="exp-content-area">
+      <div class="exp-item active" id="exp-0">
+        <div class="exp-header">
+          <div class="exp-role">Senior Accountant</div>
+          <div class="exp-meta">
+            <span class="exp-meta-item"><div class="exp-meta-dot"></div> Chartac Business Services (Pvt) Ltd</span>
+            <span class="exp-meta-item"><div class="exp-meta-dot"></div> Lahore, Pakistan</span>
+            <span class="exp-meta-item"><div class="exp-meta-dot"></div> 2021 — Present</span>
+          </div>
+          <p class="exp-desc">Concurrently managing full-cycle accounting and compliance for 8 diverse organizations across IT, engineering, consultancy, and food sectors — delivering international-standard financial management under strict deadlines.</p>
+        </div>
+        <ul class="exp-achievements">
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Prepared <span class="ach-bold">IFRS/IAS-compliant financial statements</span>, general ledger, trial balances, reconciliations, and management reports for 8 entities simultaneously.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Coordinated internal and external audits end-to-end — direct liaison with auditors, achieving <span class="ach-bold">zero major audit findings</span> across all entities.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Delivered <span class="ach-bold">20% profitability improvement</span> through cost optimization and strengthened internal controls framework.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Provided <span class="ach-bold">strategic budgeting, forecasting, and variance analysis</span> — financial advisory to senior management for data-driven decisions.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Processed payroll, <span class="ach-bold">EOBI, Social Security, income tax filings</span>, and all statutory compliance obligations accurately and on time.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div><span class="ach-bold">Led and mentored junior accounting team</span> — ensuring quality, accuracy, and timely delivery of all financial reporting.</div>
+          </li>
+        </ul>
+        <div class="exp-clients">
+          <div class="exp-clients-label">Key Clients</div>
+          <div class="exp-clients-list">Gosaas Labs (USA — IT) · TWI Technology Engineering (UK) · Kismat Food Net / Salt N Pepper DHA · On Point Consulting · Synares System · Iskaan Tech Labs · FOOD IT (SMC)</div>
+        </div>
+      </div>
+      <div class="exp-item" id="exp-1">
+        <div class="exp-header">
+          <div class="exp-role">Assistant Manager — Accounts</div>
+          <div class="exp-meta">
+            <span class="exp-meta-item"><div class="exp-meta-dot"></div> The Painters</span>
+            <span class="exp-meta-item"><div class="exp-meta-dot"></div> Lahore, Pakistan</span>
+            <span class="exp-meta-item"><div class="exp-meta-dot"></div> 2013 — 2020</span>
+          </div>
+          <p class="exp-desc">Managed complete financial operations, implemented new accounting systems, and built a strong foundation in audit-ready bookkeeping and statutory compliance across a 7-year tenure.</p>
+        </div>
+        <ul class="exp-achievements">
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Implemented a new accounting system that delivered a <span class="ach-bold">56% operational efficiency improvement</span>, streamlining month-end close and reporting cycles.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Managed complete <span class="ach-bold">AP/AR, bookkeeping, bank reconciliations</span>, and full ledger maintenance — ensuring accuracy and audit readiness.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Supported <span class="ach-bold">year-end financial statement preparation</span>, external audit documentation, and statutory tax compliance.</div>
+          </li>
+          <li>
+            <div class="ach-icon">✦</div>
+            <div>Processed <span class="ach-bold">payroll and statutory compensation records</span> — maintained accuracy and timeliness throughout 7-year tenure.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IFRS -->
+<section class="ifrs" id="ifrs">
+  <div class="section-header">
+    <div class="section-eyebrow">
+      <div class="line"></div>
+      <span>Standards Knowledge</span>
+    </div>
+    <h2>IFRS & <em>IAS Expertise</em></h2>
+  </div>
+  <div class="ifrs-grid">
+    <div class="ifrs-card"><div class="ifrs-code">IFRS 9</div><div class="ifrs-name">Financial Instruments</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">IFRS 15</div><div class="ifrs-name">Revenue Recognition</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">IFRS 16</div><div class="ifrs-name">Leases</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">IAS 16</div><div class="ifrs-name">Property, Plant & Equipment</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">IAS 36</div><div class="ifrs-name">Impairment of Assets</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">IAS 37</div><div class="ifrs-name">Provisions & Contingencies</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">IAS 38</div><div class="ifrs-name">Intangible Assets</div></div>
+    <div class="ifrs-card"><div class="ifrs-code">ISA</div><div class="ifrs-name">International Standards on Auditing</div></div>
+  </div>
+</section>
+
+<!-- QUALIFICATIONS -->
+<section class="qualifications" id="qualifications">
+  <div class="section-header">
+    <div class="section-eyebrow">
+      <div class="line"></div>
+      <span>Credentials</span>
+    </div>
+    <h2>Professional <em>Qualifications</em></h2>
+  </div>
+  <div class="quals-grid">
+    <div class="qual-card">
+      <div class="qual-abbr">ACCA</div>
+      <div class="qual-full">ACCA Finalist</div>
+      <div class="qual-body">ACCA, United Kingdom — Professional qualification equivalent to CA Finalist with completed examination papers. Globally recognized gold standard in accounting.</div>
+    </div>
+    <div class="qual-card">
+      <div class="qual-abbr">MIPA</div>
+      <div class="qual-full">Member, IPA Australia</div>
+      <div class="qual-body">Institute of Public Accountants — IPA Australia. Full professional membership, internationally recognized Australian accounting qualification.</div>
+    </div>
+    <div class="qual-card">
+      <div class="qual-abbr">AFA</div>
+      <div class="qual-full">Associate Financial Accountant</div>
+      <div class="qual-body">Institute of Financial Accountants, United Kingdom. Professional membership recognizing advanced financial accounting competency.</div>
+    </div>
+    <div class="qual-card">
+      <div class="qual-abbr">CIA</div>
+      <div class="qual-full">Certified Internal Auditor</div>
+      <div class="qual-body">Institute of Internal Auditors — In Progress. The only globally accepted certification for internal auditors.</div>
+    </div>
+    <div class="qual-card">
+      <div class="qual-abbr">ACPA</div>
+      <div class="qual-full">Associate Certified Public Accountant</div>
+      <div class="qual-body">ICPAP Pakistan. Also holds Associate Tax Advisor (ATA) and Associate Certified Internal Auditor (ACIA) designations from ICPAP.</div>
+    </div>
+    <div class="qual-card">
+      <div class="qual-abbr">BBA</div>
+      <div class="qual-full">BBA (Hons) + BS Accounting</div>
+      <div class="qual-body">Bachelor of Business Administration — Virtual University (2026). BS Accounting & Finance (Hons) — University of Lahore (2025).</div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="certifications" id="certifications">
+  <div class="section-header">
+    <div class="section-eyebrow">
+      <div class="line"></div>
+      <span>Continuous Learning</span>
+    </div>
+    <h2>Certifications & <em>Training</em></h2>
+  </div>
+  <div class="certs-grid">
+    <div class="cert-card">
+      <div class="cert-icon">⚙️</div>
+      <div>
+        <div class="cert-name">SAP S/4HANA Finance</div>
+        <div class="cert-issuer">Digital Transformation Solutions</div>
+        <div class="cert-year">2025</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🇺🇸</div>
+      <div>
+        <div class="cert-name">USA Taxation</div>
+        <div class="cert-issuer">SM Associates</div>
+        <div class="cert-year">2025</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🛡️</div>
+      <div>
+        <div class="cert-name">Anti-Money Laundering — AML/CFT</div>
+        <div class="cert-issuer">NAVTTC</div>
+        <div class="cert-year">2025</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🔎</div>
+      <div>
+        <div class="cert-name">Forensic Accounting & Fraud Examination</div>
+        <div class="cert-issuer">West Virginia University (Online)</div>
+        <div class="cert-year">2023</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📊</div>
+      <div>
+        <div class="cert-name">Data Analytics & Business Intelligence</div>
+        <div class="cert-issuer">DigiSkills / Virtual University</div>
+        <div class="cert-year">2024</div>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🤖</div>
+      <div>
+        <div class="cert-name">Google AI Essentials</div>
+        <div class="cert-issuer">Google / Coursera</div>
+        <div class="cert-year">2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech" id="tech">
+  <div class="section-header">
+    <div class="section-eyebrow">
+      <div class="line"></div>
+      <span>Technical Proficiency</span>
+    </div>
+    <h2>Tools & <em>Technology</em></h2>
+  </div>
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-icon">⚙️</div>
+      <div class="tech-name">SAP S/4HANA</div>
+      <div class="tech-level">Expert</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:92%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">📊</div>
+      <div class="tech-name">Microsoft Excel</div>
+      <div class="tech-level">Advanced</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:95%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">📚</div>
+      <div class="tech-name">QuickBooks Desktop</div>
+      <div class="tech-level">Advanced</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:88%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">📈</div>
+      <div class="tech-name">Power BI</div>
+      <div class="tech-level">Proficient</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:78%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🖥️</div>
+      <div class="tech-name">ERP Systems</div>
+      <div class="tech-level">Advanced</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:85%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">📝</div>
+      <div class="tech-name">MS Office Suite</div>
+      <div class="tech-level">Expert</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:96%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">🔬</div>
+      <div class="tech-name">Power Query</div>
+      <div class="tech-level">Proficient</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:75%"></div></div>
+    </div>
+    <div class="tech-card">
+      <div class="tech-icon">📋</div>
+      <div class="tech-name">Pivot Tables</div>
+      <div class="tech-level">Expert</div>
+      <div class="tech-bar"><div class="tech-fill" style="width:95%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-pre">
+      <div class="line"></div>
+      Get In Touch
+      <div class="line"></div>
+    </div>
+    <h2 class="contact-title">Let's Work <em>Together</em></h2>
+    <p class="contact-sub">Open to full-time roles, contract engagements, and freelance projects — locally in Pakistan or globally. Let's discuss how I can add value to your organization.</p>
+    <div class="contact-cards">
+      <a href="mailto:baigwaleedahmed@gmail.com" class="contact-card">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-label">Email</div>
+        <div class="contact-card-val">baigwaleedahmed@gmail.com</div>
+      </a>
+      <a href="tel:+923451222286" class="contact-card">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-label">Phone / WhatsApp</div>
+        <div class="contact-card-val">+92-345-1222286</div>
+      </a>
+      <a href="https://linkedin.com/in/waleed-ahmed-baig-cpa" target="_blank" class="contact-card">
+        <div class="contact-card-icon">🔗</div>
+        <div class="contact-card-label">LinkedIn</div>
+        <div class="contact-card-val">waleed-ahmed-baig-cpa</div>
+      </a>
+    </div>
+    <div class="contact-avail">
+      <div class="avail-dot"></div>
+      Available for new opportunities · Open to Global Relocation
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Waleed Ahmed Baig · Senior Accountant & Audit Professional</span>
+  <span>Lahore, Pakistan</span>
+</footer>
+
+<script>
+function showExp(index, btn){
+  document.querySelectorAll('.exp-item').forEach(e=>e.classList.remove('active'));
+  document.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('exp-'+index).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
